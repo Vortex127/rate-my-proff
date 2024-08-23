@@ -85,8 +85,8 @@
 #     final_text = text_content
 #     docs = [Document(page_content = str(final_text),metadata={"source":"local"})]
     
-#     os.environ['PINECONE_API_KEY'] = '278be841-a4ac-4259-b504-5eb9fbb2f03d'
-#     os.environ['GOOGLE_API_KEY'] = 'AIzaSyCxBuFSEBJKhPZ6P4JzM46IhfVGzUfnbzU'
+#     os.environ['PINECONE_API_KEY'] = 
+#     os.environ['GOOGLE_API_KEY'] = 
 
 #     gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 #     question = input("What is your query:  ")
@@ -168,8 +168,8 @@ def ask():
     docs = load_json()
     formatted_docs = [Document(page_content=str(docs), metadata={"source": "local"})]
 
-    os.environ['PINECONE_API_KEY'] = '278be841-a4ac-4259-b504-5eb9fbb2f03d'
-    os.environ['GOOGLE_API_KEY'] = 'AIzaSyCxBuFSEBJKhPZ6P4JzM46IhfVGzUfnbzU'
+    os.environ['PINECONE_API_KEY'] = 'your key'
+    os.environ['GOOGLE_API_KEY'] = 'your key'
 
     gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     retriever = pine_index(formatted_docs, gemini_embeddings)
